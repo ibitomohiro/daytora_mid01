@@ -1,3 +1,16 @@
 $color-main: #3F51B5;
 $color-accent: #E81919;
 $color-text: #333333;
+
+$breakpoints: (
+  'sp': 'screen and (max-width: 767px)',
+  'tab': '(min-width: 767px) and (max-width: #{$layout-width-inner})',
+  'pc': 'screen and (min-width: 768px)',
+);
+
+//メディアクエリ
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
