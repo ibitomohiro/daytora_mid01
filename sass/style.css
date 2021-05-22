@@ -103,4 +103,18 @@ a {
   height: 2px;
   background-color: #E81919;
 }
+
+.main-visual {
+  height: 600px;
+  background: url(../img/mainvisual.png) no-repeat center center/cover;
+  position: relative;
+}
+
+.main-visual__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 /*# sourceMappingURL=style.css.map */

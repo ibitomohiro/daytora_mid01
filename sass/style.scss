@@ -122,11 +122,20 @@ a {
 // main-visual 
 
 .main-visual {
-  
+  height: 600px;
+  // background-imgではなくbackgroundで設定
+  background: url(../img/mainvisual.png) no-repeat center center / cover;
+  // 親要素をposition relative
+  position: relative;
 }
 
 .main-visual__content {
-
+  // 子要素をposiion absolute
+  position: absolute;
+  // top 50%, left 50%でtransform translate(-50%, -50%)で要素を中央に！
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main-visual__title {
