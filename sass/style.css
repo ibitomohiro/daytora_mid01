@@ -55,6 +55,12 @@ a {
 .header {
   background-color: #3F51B5;
   height: 100px;
+  position: fixed;
+  width: 100%;
+  -webkit-box-shadow: 0.3px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0.3px 3px rgba(0, 0, 0, 0.16);
+  z-index: 100;
+  top: 0;
 }
 
 .header__inner {
