@@ -68,6 +68,13 @@ a {
           box-shadow: 0.3px 3px rgba(0, 0, 0, 0.16);
   z-index: 100;
   top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    height: 60px;
+  }
 }
 
 .header__inner {
@@ -129,6 +136,12 @@ a {
   background: url(../img/mainvisual.png) no-repeat center center/cover;
   position: relative;
   margin-top: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .main-visual {
+    margin-top: 60px;
+  }
 }
 
 .main-visual__content {
