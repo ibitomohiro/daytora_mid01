@@ -69,6 +69,12 @@ a {
   width: $layout-width-inner;
   max-width: 100%;
   margin: 0 auto;
+  line-height: 1.3;
+
+  @include mq('tab') {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 
   // スマホサイズのインナーの余白
   @include mq('sp') {
