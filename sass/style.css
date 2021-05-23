@@ -115,6 +115,7 @@ a {
   height: 600px;
   background: url(../img/mainvisual.png) no-repeat center center/cover;
   position: relative;
+  margin-top: 100px;
 }
 
 .main-visual__content {

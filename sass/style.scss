@@ -134,6 +134,8 @@ a {
   background: url(../img/mainvisual.png) no-repeat center center / cover;
   // 親要素をposition relative
   position: relative;
+  // ヘッダーと画像が重なっているので同じサイズのマージンを取ってあげる
+  margin-top: 100px;
 }
 
 .main-visual__content {
