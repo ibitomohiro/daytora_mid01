@@ -187,17 +187,21 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: #fff;
 }
 
 .card__item {
   width: calc(33.3% - 24px * 2 / 3);
   padding: 16px;
+  background: #fff;
   border-radius: 4px;
 }
 
 .card__item:not(:nth-child(3n + 1)) {
   margin-left: 24px;
+}
+
+.card__item:nth-child(n + 4) {
+  margin-top: 24px;
 }
 
 .card__title {

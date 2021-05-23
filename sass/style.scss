@@ -212,7 +212,7 @@ a {
   display: flex;
   // display flex複数ある時はflex-wrapを使う
   flex-wrap: wrap;
-  background: #fff;
+  
 }
 
 .card__item {
@@ -220,9 +220,15 @@ a {
   width: calc(33.3% - 24px * 2 / 3);
   // 3の倍数のカードはmargin-leftを適用されないようにする
   padding: 16px;
+  background: #fff;
   border-radius: 4px;
   &:not(:nth-child(3n + 1)) {
     margin-left: 24px;
+  }
+
+  // ２行目以降のカードに上の余白をつける
+  &:nth-child(n + 4) {
+    margin-top: 24px;
   }
 }
 
