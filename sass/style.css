@@ -154,4 +154,29 @@ a {
   border-radius: 8px;
   text-decoration: none;
 }
+
+.card {
+  background: #efefef;
+  padding: 100px 0 120px;
+}
+
+.card__head {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 28px;
+  position: relative;
+}
+
+.card__head::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: #3F51B5;
+}
 /*# sourceMappingURL=style.css.map */

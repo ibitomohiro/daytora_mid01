@@ -174,3 +174,57 @@ a {
     text-decoration: none;
   }
 }
+
+// cardセクション
+
+.card {
+  background: #efefef;
+  padding: 100px 0 120px;
+}
+
+.card__inner {
+
+}
+
+.card__head {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  // 24pxの余白とバーの太さが4px = 28px
+  padding-bottom: 28px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    // X軸の中央寄せ
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: $color-main;
+  }
+}
+
+.card__items {
+
+}
+
+.card__item {
+
+}
+
+.card__img {
+  img {
+
+  }
+}
+
+.card__title {
+
+}
+
+.card__text {
+  
+}
