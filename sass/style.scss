@@ -208,11 +208,22 @@ a {
 }
 
 .card__items {
-
+  margin-top: 80px;
+  display: flex;
+  // display flex複数ある時はflex-wrapを使う
+  flex-wrap: wrap;
+  background: #fff;
 }
 
 .card__item {
-
+  // ３等分 余白24px
+  width: calc(33.3% - 24px * 2 / 3);
+  // 3の倍数のカードはmargin-leftを適用されないようにする
+  padding: 16px;
+  border-radius: 4px;
+  &:not(:nth-child(3n + 1)) {
+    margin-left: 24px;
+  }
 }
 
 .card__img {
@@ -222,9 +233,18 @@ a {
 }
 
 .card__title {
-
+  font-size: 20px;
+  font-weight: bold;
+  color: #6F7579;
+  margin-top: 14px;
 }
 
 .card__text {
-  
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6F7579; 
+  // ２行以上の文はline heightを意識する (line-height/ font-size)デザインカンプから読み取る
+  line-height: (24 / 16);
+
 }

@@ -179,4 +179,39 @@ a {
   height: 4px;
   background: #3F51B5;
 }
+
+.card__items {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #fff;
+}
+
+.card__item {
+  width: calc(33.3% - 24px * 2 / 3);
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.card__item:not(:nth-child(3n + 1)) {
+  margin-left: 24px;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6F7579;
+  margin-top: 14px;
+}
+
+.card__text {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6F7579;
+  line-height: 1.5;
+}
 /*# sourceMappingURL=style.css.map */
