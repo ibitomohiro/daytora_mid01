@@ -101,6 +101,12 @@ a {
   align-items: center;
   //左側から並べる
   margin-left: auto;
+
+@include mq('sp') {
+  //スマホサイズにしたときにメニューの表示を消す
+  display: none;
+}
+
   li {
     &:not(:first-child) {
       margin-left: 40px;

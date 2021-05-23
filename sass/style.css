@@ -91,6 +91,12 @@ a {
   margin-left: auto;
 }
 
+@media screen and (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+}
+
 .header__nav li:not(:first-child) {
   margin-left: 40px;
 }
