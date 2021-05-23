@@ -161,6 +161,7 @@ a {
   @include mq('sp') {
     margin-top: 60px;
     // メインビジュアルに余白ができるのでmgt-60pxで調整する
+    height: 420px;
   }
 }
 
@@ -191,7 +192,7 @@ a {
 
   @include mq('sp') {
     font-size: 18px;
-    margin-top: 18px;
+    margin-top: 10px;
   }
 }
 
@@ -205,6 +206,8 @@ a {
   a {
     display: inline-block;
     width: 390px;
+    // px固定値を設定したときはmax-widthを設定
+    max-width: 100%;
     height: 83px;
     line-height: 83px;
     font-size: 32px;
@@ -214,5 +217,12 @@ a {
     background: $color-main;
     border-radius: 8px;
     text-decoration: none;
+
+    @include mq('sp') {
+      width: 280px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 24px;
+    }
   }
 }
