@@ -6,7 +6,7 @@ $layout-width-inner: 1200px;
 
 $breakpoints: (
   'sp': 'screen and (max-width: 767px)',
-  'tab': '(min-width: 767px) and (max-width: #{$layout-width-inner})',
+  "tab":"(min-width: 768px) and (max-width: #{$layout-width-inner})",
   'pc': 'screen and (min-width: 768px)',
 );
 
@@ -219,22 +219,40 @@ a {
   // ３等分 余白24px
   width: calc(33.3% - 24px * 2 / 3);
   // 3の倍数のカードはmargin-leftを適用されないようにする
-  padding: 16px;
   background: #fff;
+  padding: 16px;
   border-radius: 4px;
-  &:not(:nth-child(3n + 1)) {
-    margin-left: 24px;
+
+  @include mq('pc') {
+    &:not(:nth-child(3n + 1)) {
+      margin-left: 24px;
+    }
+
+    // ２行目以降のカードに上の余白をつける
+    &:nth-child(n + 4) {
+      margin-top: 24px;
+    }
   }
 
-  // ２行目以降のカードに上の余白をつける
-  &:nth-child(n + 4) {
-    margin-top: 24px;
+
+  @include mq('tab') {
+    // 50%のスペース、余白１を２つのコンテンツで分ける
+    width: calc(50% - 24px * 1 / 2);
+
+    &:not(:nth-child(2n + 1)) {
+      margin-left: 24px;
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: 24px;
+    }
   }
 }
 
 .card__img {
+  text-align: center;
   img {
-
+    width: 100%;
   }
 }
 
@@ -246,7 +264,7 @@ a {
 }
 
 .card__text {
-  margin-top: 16px;
+  margin-top: 14px;
   font-size: 16px;
   font-weight: bold;
   color: #6F7579; 
