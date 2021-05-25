@@ -215,6 +215,9 @@ a {
   .card__item:nth-child(n + 3) {
     margin-top: 24px;
   }
+  .card__item:nth-child(2n + 1) {
+    margin-left: 0;
+  }
 }
 
 .card__img {

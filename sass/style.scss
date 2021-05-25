@@ -246,6 +246,10 @@ a {
     &:nth-child(n + 3) {
       margin-top: 24px;
     }
+
+    &:nth-child(2n + 1) {
+      margin-left: 0;
+    }
   }
 }
 
