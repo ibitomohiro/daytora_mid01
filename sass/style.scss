@@ -6,7 +6,7 @@ $layout-width-inner: 1200px;
 
 $breakpoints: (
   'sp': 'screen and (max-width: 767px)',
-  "tab":"(min-width: 768px) and (max-width: #{$layout-width-inner})",
+  'tab': '(min-width: 767px) and (max-width: #{$layout-width-inner})',
   'pc': 'screen and (min-width: 768px)',
 );
 
@@ -161,7 +161,6 @@ a {
   background: url(../img/mainvisual.png) no-repeat center center / cover;
   // 親要素をposition relative
   position: relative;
-<<<<<<< HEAD
   // ヘッダーと画像が重なっているので同じサイズのマージンを取ってあげる
   margin-top: 100px;
 
@@ -170,9 +169,6 @@ a {
     // メインビジュアルに余白ができるのでmgt-60pxで調整する
     height: 420px;
   }
-=======
-  margin-top: 100px;
->>>>>>> 7cd7a25ad7c245bcbe7f4f238a7307c149c12d6e
 }
 
 .main-visual__content {
@@ -183,40 +179,31 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 100%;
 }
 
 .main-visual__title {
   font-size: 64px;
   font-weight: bold;
-<<<<<<< HEAD
 
   @include mq('sp') {
     font-size: 32px;
   }
 
-=======
-  line-height: 1.3;
->>>>>>> 7cd7a25ad7c245bcbe7f4f238a7307c149c12d6e
 }
 
 .main-visual__lead {
   font-size: 24px;
   font-weight: bold;
-<<<<<<< HEAD
   margin-top: 24px;
 
   @include mq('sp') {
     font-size: 18px;
     margin-top: 10px;
   }
-=======
-  margin-top: 12px;
->>>>>>> 7cd7a25ad7c245bcbe7f4f238a7307c149c12d6e
 }
 
 .main-visual__button {
-  margin-top: 30px;
+  margin-top: 36px;
 
   @include mq('sp') {
     margin-top: 28px;
@@ -225,17 +212,11 @@ a {
   a {
     display: inline-block;
     width: 390px;
-<<<<<<< HEAD
     // px固定値を設定したときはmax-widthを設定
     max-width: 100%;
     height: 83px;
     line-height: 83px;
     font-size: 32px;
-=======
-    height: 72px;
-    line-height: 72px;
-    font-size: 24px;
->>>>>>> 7cd7a25ad7c245bcbe7f4f238a7307c149c12d6e
     font-weight: bold;
     text-align: center;
     color: #fff;
@@ -250,106 +231,4 @@ a {
       font-size: 24px;
     }
   }
-}
-
-// cardセクション
-
-.card {
-  background: #efefef;
-  padding: 86px 0 120px;
-}
-
-.card__inner {
-
-}
-
-.card__head {
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-  // 24pxの余白とバーの太さが4px = 28px
-  padding-bottom: 14px;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    // X軸の中央寄せ
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 60px;
-    height: 4px;
-    background: $color-main;
-  }
-}
-
-.card__items {
-  margin-top: 80px;
-  display: flex;
-  // display flex複数ある時はflex-wrapを使う
-  flex-wrap: wrap;
-  
-}
-
-.card__item {
-  // ３等分 余白24px
-  width: calc(33.3% - 24px * 2 / 3);
-  // 3の倍数のカードはmargin-leftを適用されないようにする
-  background: #fff;
-  padding: 16px;
-  border-radius: 4px;
-
-  @include mq('pc') {
-    &:not(:nth-child(3n + 1)) {
-      margin-left: 24px;
-    }
-
-    // ２行目以降のカードに上の余白をつける
-    &:nth-child(n + 4) {
-      margin-top: 24px;
-    }
-  }
-
-
-  @include mq('tab') {
-    // 50%のスペース、余白１を２つのコンテンツで分ける
-    width: calc(50% - 24px * 1 / 2);
-
-    &:not(:nth-child(2n + 1)) {
-      margin-left: 24px;
-    }
-
-    &:nth-child(n + 3) {
-      margin-top: 24px;
-    }
-
-    &:nth-child(2n + 1) {
-      margin-left: 0;
-    }
-  }
-}
-
-.card__img {
-  text-align: center;
-  img {
-    width: 100%;
-  }
-}
-
-.card__title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #6F7579;
-  margin-top: 4px;
-}
-
-.card__text {
-  margin-top: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #6F7579; 
-  // ２行以上の文はline heightを意識する (line-height/ font-size)デザインカンプから読み取る
-  line-height: (24 / 16);
-
 }
