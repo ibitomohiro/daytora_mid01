@@ -275,7 +275,7 @@ a {
   font-size: 16px;
   font-weight: bold;
   color: #6F7579; 
-  // ２行以上の文はline heightを意識する (line-height/ font-size)デザインカンプから読み取る
+  // ２行以上の文はline heightを意識する (line-height/ font-size)デザインカンプから読み取る割り算
   line-height: (24 / 16);
 
 }
